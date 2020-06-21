@@ -21,3 +21,18 @@ after_success:
   - docker push abhijitsinghas/multi-nginx
   - docker push abhijitsinghas/multi-server
   - docker push abhijitsinghas/multi-worker
+
+# depllyments script for AWS ElasticBeanStack
+# deploy:
+#   provider: elasticbeanstack
+#   region: "us-west-2"
+#   app: "multi-docker"
+#   env: "MultiDocker-env"
+#   bucket: "bucket-name"
+#   bucket_path: "multi-docker"
+#   on: 
+#     branch: master
+#   # AWS_ACCESS_KEY environment variable with aws access key set in Travis Console
+#   access_key_id: $AWS_ACCESS_KEY     
+#   # AWS_SECRET_KEY environment variable with aws secret key set in Travis Console
+#   secret_access_key: $AWS_SECRET_KEY
